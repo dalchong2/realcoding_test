@@ -55,6 +55,8 @@ public class ChampionTest {
     public void givenStringWhenNullIsCorrect() {
         String lck = null;
         assertThat(lck, nullValue());
+        assertThat(lck, notNullValue());//오류가 발생한다.
+
 
     }
 
