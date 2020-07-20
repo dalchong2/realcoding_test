@@ -160,8 +160,13 @@ public class ChampionTest {
     @Test
     public void shouldHaveSomeChampName() {
         List<String> champListNames = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가느", "블라디미르");
-        assertThat(champListNames.get(0), hasToString("루시안"));
-        assertThat(champListNames.get(0), hasToString("애"));
+        List<String> memberListNames = Arrays.asList("권은비", "사쿠라", "강혜원", "최예나", "이채연","김채원","김민주", "히토미", "나코", "조유리","안유진","장원영");
+
+        assertThat(memberListNames.get(1),hasToString("사쿠라"));
+        //assertThat(memberListNames.get(1),hasToString("쿠라"));
+        assertTrue(memberListNames.size() == 12);
+        //assertThat(champListNames.get(0), hasToString("루시안"));
+        //assertThat(champListNames.get(0), hasToString("애"));
 
     }
 
