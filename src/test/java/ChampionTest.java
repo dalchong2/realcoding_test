@@ -91,7 +91,9 @@ public class ChampionTest {
     //anything 테스트
     @Test
     public void shouldNotErrorGetReference() {
-        assertThat(championList.get(2), anything());
+        assertThat(championList.get(0), anything());
+        assertThat(championList.get(6),anything());
+        System.out.println(championList.get(0));
     }
 
     //객체 크기 검증 테스트 hasSize
