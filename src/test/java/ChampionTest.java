@@ -44,8 +44,10 @@ public class ChampionTest {
     //notNullValue 활용한 테스트
     @Test
     public void notNullCheck() {
-        String lck = "LCK";
-        assertThat(lck, notNullValue());
+        //String lck = "LCK";
+        String IZone = "IZone";
+        //assertThat(lck, notNullValue());
+        assertThat(IZone, notNullValue());
     }
 
     //nullValue 활용한 테스트
