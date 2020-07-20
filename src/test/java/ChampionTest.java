@@ -135,6 +135,12 @@ public class ChampionTest {
     @Test
     public void shouldSupportChampionIsTaric() {
         Champion supportChamp = new Champion("타릭", "바텀");
+        Champion supVolcal =new Champion("나코","서브보컬");
+
+        assertThat("나코", is(supVolcal.getName()));
+        assertThat("나코", is(equalTo(supVolcal.getName())));
+        assertThat("나코", equalTo(supVolcal.getName()));
+        //assertEquals(true, equalTo(supVolcal2.getName()));
 //        assertThat("타릭", is(supportChamp.getName()));
 //        assertThat("타릭", is(equalTo(supportChamp.getName())));
 //        assertThat("타릭", equalTo(supportChamp.getName()));
