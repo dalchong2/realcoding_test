@@ -84,7 +84,8 @@ public class ChampionTest {
     //부동소수점 범위 closeTo 테스트
     @Test
     public void testForFloatingPoint() {
-        assertThat(3.14, closeTo(3, 0.2));
+        //assertThat(3.14, closeTo(3, 0.2));
+        assertThat(4.2, closeTo(4, 0.7));//이부분 강사님께 질문
     }
 
     //anything 테스트
