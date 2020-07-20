@@ -44,8 +44,15 @@ public class ChampionTest {
         Champion  leadDancer = new Champion("안유진", "리드댄서");
         Champion  center = new Champion("장원영", "센터");
 
-
-
+        championList.add(leader);
+        championList.add(supVocal);
+        championList.add(leadLapper);
+        championList.add(lapper);
+        championList.add(mainDancer);
+        championList.add(leadVocal);
+        championList.add(mainVocal);
+        championList.add(leadDancer);
+        championList.add(center);
 
     }
 
@@ -107,16 +114,21 @@ public class ChampionTest {
     @Test
     public void shouldNotErrorGetReference() {
         assertThat(championList.get(0), anything());
-        assertThat(championList.get(6),anything());
+        assertThat(championList.get(10),anything());
         System.out.println(championList.get(0));
     }
 
     //객체 크기 검증 테스트 hasSize
     @Test
     public void shouldChampionCountFive() {
-        assertTrue(championList.size() == 5);
-        assertThat(championList.size(), is(5));
-        assertThat(championList, hasSize(5));
+        //assertTrue(championList.size() == 5);
+        //assertThat(championList.size(), is(5));
+        //assertThat(championList, hasSize(5));
+
+        assertTrue(championList.size() == 9);
+        assertFalse(championList.size()==8);
+        assertThat(championList.size(), is(9));
+        assertThat(championList, hasSize(10));
     }
 
     //서폿 챔피언은 타릭이어야 한다라는 조건으로 테스트 코드 작성
