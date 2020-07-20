@@ -149,6 +149,9 @@ public class ChampionTest {
     //hasProperty 활용하여 속성이 포함되어 있는지 테스트
     @Test
     public void shouldHasPropertyPosition() {
+        assertThat(championList.get(2), hasProperty("position"));
+        assertThat(championList.get(2),hasProperty("position",equalTo("리드래퍼")));
+        System.out.println(championList.get(2));
 //        assertThat(championList.get(0), hasProperty("position"));
 //        assertThat(championList.get(0), hasProperty("position", equalTo("탑")));
     }
