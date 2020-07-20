@@ -175,6 +175,11 @@ public class ChampionTest {
     public void shouldHaveSamePropertyAndValue() {
         List<String> championNames1 = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가나", "블라디미르");
         List<String> championNames2 = Arrays.asList("루시안", "애쉬", "렉사이", "갈리오", "모르가나", "블라디미르");
+        List<String> memberListNames1 = Arrays.asList("권은비", "사쿠라", "강혜원", "최예나", "이채연","김채원","김민주", "히토미", "나코", "조유리","안유진","장원영");
+        List<String> memberListNames2 = Arrays.asList("권은비", "사쿠라", "강혜원", "최예나", "이채연","김채원","김민주", "히토미", "나코", "조유리","안유진","장원영");
+
+        assertThat(memberListNames1, samePropertyValuesAs(memberListNames2));
+        //assertThat(championNames1,samePropertyValuesAs(memberListNames1));
         assertThat(championNames1, samePropertyValuesAs(championNames2));
 //        assertThat(championNames1, samePropertyValuesAs(championNames2));
     }
@@ -183,11 +188,18 @@ public class ChampionTest {
     @Test
     public void shouldTopChampionIsDarius() {
         Optional<Champion> filterdChampion = championList.stream()
-                .filter(c -> c.getPosition().equals("탑"))
+                .filter(c -> c.getPosition().equals("리드보컬"))
                 .findFirst();
         String champName = filterdChampion.get().getName();
-        assertTrue(champName.equals("다리우스"));
-        assertThat("다리우스", is(champName));
+        assertTrue(champName.equals("김채원"));
+        assertThat("김채원", is(champName));
+
+        Optional<Champion> filterMember = championList.stream()
+                .filter(c->c.getName().equals("김채원"))
+                .findFirst();
+        String memberPosition = filterMember.get().getPosition();
+        assertTrue(memberPosition.equals("리드보컬"));
+        assertThat("리드보컬",is(memberPosition));
     }
 
 }
