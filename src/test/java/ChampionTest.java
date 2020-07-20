@@ -66,9 +66,13 @@ public class ChampionTest {
     public void testForRelatedString() {
         String sampleString1 = "Player Focus";
         String sampleString2 = "Player point";
+        String sampleSrting3 = "Focus Player point ";
         String startString = "Player";
+        String startString2 = "Focus";
         String endString = "point";
         assertThat(sampleString1, anyOf(startsWith(startString), containsString(endString)));
+        assertThat(sampleSrting3,anyOf(startsWith(startString2),containsString(startString)));
+        assertThat(sampleString1, allOf(startsWith(startString),endsWith(startString2)));
         //assertThat(sampleString1, is(endsWith(endString)));
         assertThat(sampleString2, is(startsWith(startString)));
         assertThat(sampleString2, is(endsWith(endString)));
