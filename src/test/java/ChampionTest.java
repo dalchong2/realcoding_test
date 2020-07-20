@@ -20,18 +20,33 @@ public class ChampionTest {
     public void setUp() {
 
         //5개의 챔피언 객체를 만듭니다.
-        Champion topChamp = new Champion("다리우스", "탑");
-        Champion jungleChamp = new Champion("리신", "정글");
-        Champion midChamp = new Champion("르블랑", "미드");
-        Champion adcChamp = new Champion("베인", "바텀");
-        Champion supportChamp = new Champion("레오나", "바텀");
+        //Champion topChamp = new Champion("다리우스", "탑");
+        //Champion jungleChamp = new Champion("리신", "정글");
+        //Champion midChamp = new Champion("르블랑", "미드");
+        //Champion adcChamp = new Champion("베인", "바텀");
+        //Champion supportChamp = new Champion("레오나", "바텀");
 
         //앞서 만든 List 에 각 챔피언을 추가합니다.
-        championList.add(topChamp);
-        championList.add(jungleChamp);
-        championList.add(midChamp);
-        championList.add(adcChamp);
-        championList.add(supportChamp);
+        //championList.add(topChamp);
+        //championList.add(jungleChamp);
+        //championList.add(midChamp);
+        //championList.add(adcChamp);
+        //championList.add(supportChamp);
+
+        //전체 멤버는 12명이지만 포지션이 겹치는 멤버는 제외
+        Champion  leader = new Champion("권은비", "리더");
+        Champion  supVocal= new Champion("사쿠라", "서브보컬");
+        Champion  leadLapper = new Champion("강혜원", "리드래퍼");
+        Champion  lapper = new Champion("최예나", "래퍼");
+        Champion  mainDancer = new Champion("이채연", "메인댄서");
+        Champion  leadVocal= new Champion("김채원", "리드보컬");
+        Champion  mainVocal = new Champion("조유리", "메인보컬");
+        Champion  leadDancer = new Champion("안유진", "리드댄서");
+        Champion  center = new Champion("장원영", "센터");
+
+
+
+
     }
 
     //List<String>을 생성하고 값이 비어 있는지를 테스트 empty()
