@@ -51,6 +51,7 @@ public class UpperCaseCounterTest {
         assertTrue(numberOfUpperCaseCharactersInString2==10);
         //assertTrue(numberOfUpperCaseCharactersInString2 == 9);
         assertFalse(numberOfUpperCaseCharactersInString2==10);
+        assertFalse(numberOfUpperCaseCharactersInString2==9);
         assertThat(numberOfUpperCaseCharactersInString2, is(10));
         System.out.println("result :: "+ numberOfUpperCaseCharactersInString2);
 
@@ -63,9 +64,14 @@ public class UpperCaseCounterTest {
     @Test
     public void getNumberOfUpperCaseCharacterInString_return_6_for_ABCdefGHI(){
         String str = "ABCdefGHI";
-
+        String str2 = "abcdef"
         int result = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str);
+        int result2 = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str2);
         assertTrue(result == 6);
+        assertTrue(result2==0);
+        assertFalse(result2==1);
+        assertThat(result2, is(0));
+
         //assertFalse(result==7);
         //assertThat(result, is(6));
         //assertTrue로 맞는 테스트 코드 작성
