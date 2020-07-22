@@ -64,7 +64,7 @@ public class UpperCaseCounterTest {
     @Test
     public void getNumberOfUpperCaseCharacterInString_return_6_for_ABCdefGHI(){
         String str = "ABCdefGHI";
-        String str2 = "abcdef"
+        String str2 = "abcdef";
         int result = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str);
         int result2 = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str2);
         assertTrue(result == 6);
@@ -83,7 +83,10 @@ public class UpperCaseCounterTest {
     //잘못된 값을 참조했을 때 IndexOutOfBoundsException Exception이 발생하는지 테스트 코드 작성
     @Test
     public void shouldThrowExceptionWhenGetZeroIndex() {
-        new ArrayList<Object>().get(0);
+        ArrayList<Object> list = new ArrayList<Object>();
+        list.add("a");
+        list.get(1);
+        //new ArrayList<Object>().get(0);
     }
 
     //해당 메소드가 제한된 시간내에 실행되는지에 대한 테스트 코드 작성 : timeout 사용
