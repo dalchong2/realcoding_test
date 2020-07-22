@@ -18,9 +18,14 @@ public class CustomCalculatorTest {
     public void add() {
         customCalculator = new CustomCalculator();
         int result = customCalculator.add(10, 15);
+        int result2 = customCalculator.add(1,2);
         /* 이곳에 테스트 코드를 작성하세요. */
         assertTrue(result == 25);
+        assertFalse(result==20);
         assertThat(result, is(25));
+
+
+
         System.out.println("result :: " + result);
     }
 
@@ -48,9 +53,11 @@ public class CustomCalculatorTest {
     public void multiply() {
         customCalculator = new CustomCalculator();
         int result = customCalculator.multiply(5, 9);
+        int result2 = customCalculator.multiply(10, 9);
         /* 이곳에 테스트 코드를 작성하세요. */
         assertTrue(result == 45);
         assertThat(result, is(45));
+        assertFalse(result2 == 10);
         System.out.println("result :: " + result);
     }
 
@@ -62,30 +69,48 @@ public class CustomCalculatorTest {
         /* 이곳에 테스트 코드를 작성하세요. */
         assertTrue(result == 5);
         assertThat(result, is(5));
+        assertFalse( result==4);
         System.out.println("result :: " + result);
     }
 
 
     @Test(timeout = 4000)
     public void timeInMethodTest() throws InterruptedException {
-        Thread.sleep(5000);
+        Thread.sleep(3000);
+        //Thread.sleep(5000);
+    }
+
+    @Test(timeout = 2000)
+    public void timeOutMethodTest() throws InterruptedException{
+        Thread.sleep(6000);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testIsEmptyIndexOutOfBoundException(){
+        ArrayList<Object> myList = new ArrayList<>();
+        myList.add("adad");
         new ArrayList<Object>().get(0);
+        myList.get(1);
+
     }
 
 
     @Test
     public void testMethod(){
         ArrayList<Object> myList = new ArrayList<Object>();
+        assertThat(myList.size(), is(0));
+        //assertThat(myList.get(0),is(0));
         assertThat(myList,is(empty()));
     }
 
     @Test
     public void isEmptyArray(){
         ArrayList<Object> myList = new ArrayList<>();
+        ArrayList<Object> myList2 = new ArrayList<>();
         assertThat(myList, is(empty()));
+        assertThat(myList2, is(empty()));
+        myList2.add("asd");
+        assertThat(myList2, is(empty()));
+
     }
 }
